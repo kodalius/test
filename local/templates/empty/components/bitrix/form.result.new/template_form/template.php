@@ -12,7 +12,7 @@ if ($arResult["isFormErrors"] == "Y"):?><?= $arResult["FORM_ERRORS_TEXT"]; ?><? 
                 ваших требований
             </div>
         </div>
-        <?= str_replace('<form', '<form class="contact-form__form"  method="POST"', $arResult["FORM_HEADER"]) ?>
+        <?= str_replace('<form', '<form class="contact-form__form" action="/" method="POST"', $arResult["FORM_HEADER"]) ?>
 
         <div class="contact-form__form-inputs">
             <?
@@ -60,11 +60,10 @@ if ($arResult["isFormErrors"] == "Y"):?><?= $arResult["FORM_ERRORS_TEXT"]; ?><? 
                 данных&raquo;.
             </div>
             <input class="form-button contact-form__bottom-button" <?= (intval($arResult["F_RIGHT"]) < 10 ? "disabled=\"disabled\"" : ""); ?>
-                   type="submit" name="web_form_submit" value="<?=htmlspecialcharsbx(trim($arResult["arForm"]["BUTTON"]) == '' ? GetMessage("FORM_ADD") : $arResult["arForm"]["BUTTON"]);?>"/>
-            
-
+                   type="submit" name="
+                web_form_submit" value="Оставить заявку"/>
         </div>
-
+        </form>
     </div>
 
 
